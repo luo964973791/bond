@@ -2,7 +2,7 @@
 
 ```javascript
 ip add
-nmcli c add ifname bond0 con-name bond0 type bond mode 802.3ad ipv4.method manual ipv4.addresses 172.27.0.0/24 ipv4.gateway 255.255.255.0 ipv4.dns 172.27.0.2
+nmcli c add ifname bond0 con-name bond0 type bond mode 802.3ad ipv4.method manual ipv4.addresses 172.27.0.0/24 ipv4.gateway 172.27.0.2 ipv4.dns 172.27.0.2
 nmcli c add ifname eth0 con-name eth0 type bond-slave master bond0
 nmcli c add ifname eth1 con-name eth1 type bond-slave master bond0
 systemctl disable NetworkManager && systemctl stop NetworkManager
